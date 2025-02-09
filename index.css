@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+#question-wrapper {
+    text-align: center;
+}
+
+#question {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.question-counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    color: #555;
+}
+
+#current-question, #total-questions {
+    font-weight: bold;
+}
+
+#options-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    gap: 10px;
+}
+/* #options-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10%;
+    gap: 10%;
+} */
+
+#options div {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 80%;
+}
+
+/* #options div:hover {
+    background-color: #e1e1e1;
+}
+
+#options div.selected {
+    background-color: #e1e1e1;
+} */
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled:not(.selected) {
+    background-color: #cadbcb;
+    cursor: not-allowed;
+}
+button .selected {
+    background-color: #45a049;
+    cursor: not-allowed;
+}
+
+
+/* @media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #question {
+        font-size: 1rem;
+    }
+
+    .question-counter {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #options div {
+        font-size: 1rem;
+    }
+
+    .button button {
+        font-size: 0.9rem;
+        width: 48%;
+    }
+} */
