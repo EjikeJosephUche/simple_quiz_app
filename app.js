@@ -31,10 +31,8 @@ function loadQuestions() {
     const currentQuestion = questions[currentQuestionIndex].question;
     const currentOptions = questions[currentQuestionIndex].options;
     
-    // Display the current question
     questionDisplayElement.innerHTML = currentQuestion;
     
-    // Display the progress indicator
     currentQuestionElement.innerHTML = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
     
     // Display the options
@@ -56,16 +54,13 @@ function loadQuestions() {
 function checkAnswer(selectedAnswer) {
     const correctAnswer = questions[currentQuestionIndex].correctAnswer;
     
-    // Mark the selected option with a "selected" class
     const allOptions = optionsElement.querySelectorAll(".option");
     allOptions.forEach(optionButton => {
         optionButton.disabled = true;
-        // If the button is the selected answer, apply the "selected" class
-        if (optionButton.innerHTML === selectedAnswer) {
+          if (optionButton.innerHTML === selectedAnswer) {
             optionButton.classList.add("selected");
         } else {
-            // Optionally, you could disable other options or leave them unchanged
-            // optionButton.classList.remove("selected");
+            optionButton.classList.remove("selected");
         }
     });
 
@@ -81,7 +76,6 @@ function showResults() {
     const resultMessage = `You have completed the quiz! Your score is ${correctlyAnsweredQuestions} out of ${questions.length}.`;
     questionDisplayElement.innerHTML = resultMessage;
     
-    // Hide the options and navigation buttons
     optionsElement.style.display = "none";
     prevButtonElement.style.display = "none";
     nextButtonElement.style.display = "none";
@@ -109,7 +103,6 @@ function showResults() {
 
 // Function to restart the quiz
 function restartQuiz() {
-    // Reset the score and question index
     correctlyAnsweredQuestions = 0;
     currentQuestionIndex = 0;
     

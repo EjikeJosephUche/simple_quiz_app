@@ -56,26 +56,25 @@ h2 {
 }
 
 #options-wrapper {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
+    justify-content: space-between;
     row-gap: 10px;
     gap: 10px;
 }
-/* #options-wrapper {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 10%;
-    gap: 10%;
-} */
 
-#options div {
-    background-color: #f2f2f2;
+
+#options button {
+    display: inline-block;
+    /* background-color: #f2f2f2; */
     padding: 10px;
     border-radius: 6px;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease;
-    width: 80%;
+    width: 48%;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 /* #options div:hover {
@@ -102,7 +101,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 48%;
-}
+    }
 
 button:hover {
     background-color: #45a049;
@@ -115,6 +114,10 @@ button:disabled:not(.selected) {
 button .selected {
     background-color: #45a049;
     cursor: not-allowed;
+}
+
+.restart-button, .quit-button:not(#options){
+    margin-right: 10px;
 }
 
 
